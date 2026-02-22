@@ -26,13 +26,13 @@ All three child processes execute identical CPU-bound loops:
 - Child 1 (10 tickets): completed 108,832 work units
 - Child 2 (20 tickets): completed 159,052 work units  
 - Child 3 (30 tickets): completed 192,905 work units
-- **Observed ratios: 1.0 : 1.46 : 1.77**
+- Observed ratios: 1.0 : 1.46 : 1.77
 
 **Long run (10,000 ticks ≈ 100 seconds):**
 - Child 1 (10 tickets): completed 1,108,822 work units
 - Child 2 (20 tickets): completed 1,699,005 work units  
 - Child 3 (30 tickets): completed 1,923,519 work units
-- **Observed ratios: 1.0 : 1.53 : 1.73**
+- Observed ratios: 1.0 : 1.53 : 1.73
 
 ### Analysis
 
@@ -69,7 +69,6 @@ In runs of moderate duration (1000 ticks), observable variance exists:
 - Background processes (shell, init with 1 ticket each) also compete for CPU time
 - The observed 1.46 : 1.77 ratios show deviation from expected 2:3, demonstrating statistical variance
 - Different runs produce different ratios (inherent randomness of lottery scheduling)
-- Variance follows binomial distribution: σ² = np(1-p)
 
 ### Long-Run Convergence
 The results demonstrate probabilistic fairness while highlighting factors affecting convergence:
