@@ -58,7 +58,7 @@ All three child processes execute identical CPU-bound loops:
 3. **Trend is correct**: More tickets consistently yields more work completed
 4. **System overhead persists**: Background processes still dilute ratios even in long runs
 5. **Statistical convergence visible**: Ratios approach expected values with more scheduling events
-6. **Run-to-run variance observable**: Short runs show variation (e.g., Child 3: 1.77 in one run), while long runs are more stable
+6. **Run-to-run variance observable**: Short runs show variation (e.g., Child 3: 1.77 in one run and 1.64 in another), while long runs are more stable
 
 ## Variance and Convergence
 
